@@ -4,7 +4,8 @@ AM_LDFLAGS               = $(top_builddir)/ew/utils/libutils.la \
                            $(top_builddir)/ew/sed/libsedflux.la
 
 bin_PROGRAMS                = plume plume_run_file
-plume_SOURCES               = plumemain.c plumeout1.c plumeread.c plume_scan.c
+
+plume_SOURCES               = plumemain.c plumeout1.c plumeread.c plume_scan.c bmi_plume.c plume_model.c
 plume_run_file_SOURCES      = plume_run_file.c
 plume_DEPENDENCIES          = libplume.la
 plume_run_file_DEPENDENCIES = libplume.la
@@ -38,8 +39,8 @@ libplume_la_SOURCES       = \
                             plumeread2d.c   \
                             plumeset.c
 
-plumeinclude_HEADERS      = plumevars.h plumeinput.h plume_types.h plume_approx.h plume_local.h
+plumeinclude_HEADERS      = plumevars.h plumeinput.h plume_types.h plume_approx.h plume_local.h bmi_plume.h
 plumeincludedir           = $(includedir)/ew-2.0
 
-LDADD                     = -lplume 
+LDADD                     = -lplume
 
