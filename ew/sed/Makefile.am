@@ -113,7 +113,14 @@ datadir_path.h: Makefile
 	if test -f $(srcdir)/datadir_path.h ; then :; else \
 	   chmod u+w $(srcdir) ; \
 	   echo '#if !defined(DATADIR)' > $(srcdir)/datadir_path.h ; \
-	   echo '# define DATADIR "$(datadir)"' >> $(srcdir)/datadir_path.h ; \
+	   echo '#define DATADIR "$(datadir)"' >> $(srcdir)/datadir_path.h ; \
+	   echo '#define PLUGINDIR "@PLUGINDIR@"' >> $(srcdir)/datadir_path.h ; \
+	   echo '#define SVNURL "@SVNURL@"' >> $(srcdir)/datadir_path.h ; \
+	   echo '#define SVNROOT "@SVNROOT@"' >> $(srcdir)/datadir_path.h ; \
+	   echo '#define SVNVERSION "@SVNVERSION@"' >> $(srcdir)/datadir_path.h ; \
+	   echo '#define SVNAUTHOR "@SVNAUTHOR@"' >> $(srcdir)/datadir_path.h ; \
+	   echo '#define SVNDATE "@SVNDATE@"' >> $(srcdir)/datadir_path.h ; \
+	   echo '#define SVNREV "@SVNREV@"' >> $(srcdir)/datadir_path.h ; \
 	   echo '#endif' >> $(srcdir)/datadir_path.h ; \
 	fi
 
