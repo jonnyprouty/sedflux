@@ -213,7 +213,7 @@ if test x$enable_doxygen != xno ; then
    AC_CHECK_LIB(fl,[main])
    if test x$HAVE_LIBFL != x ; then
 
-      AC_CHECK_PROGS( FLEX , flex )
+      AC_CHECK_PROGS(FLEX, flex )
       if test x$FLEX != x ; then
          FLEX_VERSION=`$FLEX --version`
          enable_flex=yes
@@ -242,13 +242,13 @@ GLIB_ADD_TO_VAR(CFLAGS, ${GLIB_CFLAGS} , ${GLIB_CFLAGS} )
 GLIB_ADD_TO_VAR(LIBS, ${GLIB_LIBS} , ${GLIB_LIBS} )
 GLIB_ADD_TO_VAR(LIBS, -lm , -lm )
 
-AC_SUBST( GLIB_LIBS )
-AC_SUBST( GLIB_CFLAGS )
-AC_SUBST( GTK_LIBS )
-AC_SUBST( GTK_CFLAGS )
-AC_SUBST( CHECK_LIBS )
-AC_SUBST( CHECK_CFLAGS )
-AC_SUBST( DPKG_ARCHITECTURE )
+AC_SUBST(GLIB_LIBS)
+AC_SUBST(GLIB_CFLAGS)
+AC_SUBST(GTK_LIBS)
+AC_SUBST(GTK_CFLAGS)
+AC_SUBST(CHECK_LIBS)
+AC_SUBST(CHECK_CFLAGS)
+AC_SUBST(DPKG_ARCHITECTURE)
 
 AC_CONFIG_FILES([ ew/utils/utils.pc ])
 AC_CONFIG_FILES([ ew/sed/sedflux.pc ])
