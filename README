@@ -4,6 +4,7 @@ The ew package requires glib version 2.6 or newer.  This latest version can
 be downloaded from www.gtk.org.  Alternatively, the latest version that is
 currently being used in ew is available at ftp://instaar.colorado.edu/pub/ew.
 
+
 --- Installing glib ---
 
 If you do not have glib installed on your machine, you must install it before
@@ -21,7 +22,8 @@ mkdir glib-build; cd glib-build
 3) configure the package.  Here you must decide where you want to install the
 glib package.  If you do not specify the prefix argument, then it will be
 installed in /usr/local.  When i want to install it in my home directory,
-i use /home/plum/huttone/my_progs/glib inplace of GLIB_DIR.
+i use /home/plum/huttone/my_progs/glib inplace of GLIB_DIR. Prereqs for building
+on Ubuntu 20.04 include flex and libtool.
 
 ../glib-2.0.6/configure --prefix=GLIB_DIR
 
